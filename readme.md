@@ -25,33 +25,8 @@ Databases are fundamental to modern software applications. They allow you to sto
 
 Upon completion, save your SQL scripts and any relevant files. Submit them according to your instructor's guidelines.
 
-## Exercises
+## bd01
 
 ### Exercise 1: Creating a Database
 
-Create a new database named `company`. Inside this database, create the following tables:
 
-- `employees`:
-  - `id` (INT, Primary Key, Auto Increment)
-  - `first_name` (VARCHAR(50))
-  - `last_name` (VARCHAR(50))
-  - `email` (VARCHAR(100))
-  - `hire_date` (DATE)
-
-- `departments`:
-  - `id` (INT, Primary Key, Auto Increment)
-  - `name` (VARCHAR(100))
-
-- `projects`:
-  - `id` (INT, Primary Key, Auto Increment)
-  - `name` (VARCHAR(100))
-  - `start_date` (DATE)
-  - `end_date` (DATE)
-
-### Exercise 2: Inserting Data
-
-Insert the following data into your tables:
-
-- `employees`:
-  ```sql
-  INSERT INTO employees (first_name
