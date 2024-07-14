@@ -1,28 +1,29 @@
 ### LAB
 <hr>
 
-### EJERCICIO I Cardinalidad
-## 1. Tabla Principal: Libros
-Grado: 4
-Número de columnas: id_libro, titulo, anio_publicacion, genero
-Cardinalidad: Dependerá del número de libros  insertados en la tabla. Vamos a asumir que puede ser N libros.
+## EJERCICIO I Cardinalidad
 
-## 2. Tabla Adicional 1: Autores
+    ### 1. Tabla Principal: Libros
+    Grado: 4
+        Número de columnas: id_libro, titulo, anio_publicacion, genero
+        Cardinalidad: Dependerá del número de libros  insertados en la tabla. Vamos a asumir que puede ser N libros.
+
+### 2. Tabla Adicional 1: Autores
 Grado: 2
 Número de columnas: id_autor, nombre
 Cardinalidad: Dependerá del número de autores  insertados en la tabla. Vamos a asumir que puede ser M autores.
 
-## 3. Tabla Adicional 2: Ejemplares
+### 3. Tabla Adicional 2: Ejemplares
 Grado: 4
 Número de columnas: id_ejemplar, id_libro, ubicacion, estado
 Cardinalidad: Dependerá del número de ejemplares  insertados  en la tabla. Vamos a asumir que puede ser P ejemplares.
 
-## 4. Tabla Adicional 3: Editoriales
+### 4. Tabla Adicional 3: Editoriales
 Grado: 2
 Número de columnas: id_editorial, nombre
 Cardinalidad: Dependerá del número de editoriales insertados en la tabla. Vamos a asumir que puede ser Q editoriales.
 
-## 5. Tabla Intermedia: LibroAutor
+### 5. Tabla Intermedia: LibroAutor
 Grado: 2
 Número de columnas: id_libro, id_autor
 Cardinalidad: Dependerá del número de relaciones entre libros y autores que insertes en la tabla. Vamos a asumir que puede ser R relaciones.
