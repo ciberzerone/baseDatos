@@ -160,7 +160,7 @@ Cardinalidad: Dependerá del número de relaciones entre libros y autores que in
 
 
 ## Imagen de ER - Tienda de Electrodomésticos
-![Electrodomésticos](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/electrodomesticos.PNG)
+![Electrodomésticos](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/electodomesticos.PNG)
 
 <hr>
 
