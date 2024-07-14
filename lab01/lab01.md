@@ -66,6 +66,10 @@ Cardinalidad: Dependerá del número de relaciones entre libros y autores que in
 - **Miembro-Préstamo**: Un miembro puede tener uno o más préstamos, y un préstamo está asociado a un miembro.
 - **Préstamo-Libro**: Un préstamo puede incluir uno o más libros, y un libro puede ser incluido en diferentes préstamos a lo largo del tiempo.
 
+## Imagen de ER - Biblioteca
+![biblioteca](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/biblioteca.PNG)
+
+
 ## Sistema 2: Supermercado
 
 ### Entidades y Atributos
@@ -106,6 +110,12 @@ Cardinalidad: Dependerá del número de relaciones entre libros y autores que in
 - **Producto-Proveedor**: Un producto puede ser suministrado por uno o más proveedores, y un proveedor puede suministrar varios productos.
 - **Cliente-Venta**: Un cliente puede realizar una o más ventas, y una venta está asociada a un cliente.
 - **Venta-DetalleVenta**: Una venta puede tener varios detalles de venta, y un detalle de venta está asociado a una venta y a un producto.
+
+## Imagen de ER - Supermercado
+![Supermercado](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/supermercado.PNG)
+
+
+
 
 ## Sistema 3: Tienda de Electrodomésticos
 
