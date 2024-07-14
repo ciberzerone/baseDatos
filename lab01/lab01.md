@@ -158,6 +158,10 @@ Cardinalidad: Dependerá del número de relaciones entre libros y autores que in
 - **Cliente-Venta**: Un cliente puede realizar una o más ventas, y una venta está asociada a un cliente.
 - **Venta-DetalleVenta**: Una venta puede tener varios detalles de venta, y un detalle de venta está asociado a una venta y a un electrodoméstico.
 
+
+## Imagen de ER - Tienda de Electrodomésticos
+![Electrodomésticos](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/electrodomesticos.PNG)
+
 <hr>
 
 ### EJERCICIO III  Consultas Básicas en SQL para la Base de Datos de Películas
