@@ -180,11 +180,11 @@ Cardinalidad: Dependerá del número de relaciones entre libros y autores insert
 
 
 ### ER - Electrodomésticos PDF:
-[Ver PDF](https://github.com/ciberzerone/baseDatos/blob/main/lab01/pdf/electodomesticos.pdf)
+[Ver PDF](https://github.com/ciberzerone/baseDatos/blob/main/lab01/pdf/electrodomesticos.pdf)
 
 
 ### SQL - Electrodomésticos PDF:
-[Ver SQL](https://github.com/ciberzerone/baseDatos/blob/main/lab01/sql/electodomesticos.sql)
+[Ver SQL](https://github.com/ciberzerone/baseDatos/blob/main/lab01/sql/electrodomesticos.sql)
 
 
 
