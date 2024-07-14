@@ -5,22 +5,22 @@
 ## 1. Tabla Principal: Libros
 Grado: 4
 Número de columnas: id_libro, titulo, anio_publicacion, genero
-Cardinalidad: Dependerá del número de libros que insertes en la tabla. Vamos a asumir que puede ser N libros.
+Cardinalidad: Dependerá del número de libros  insertados en la tabla. Vamos a asumir que puede ser N libros.
 
 ## 2. Tabla Adicional 1: Autores
 Grado: 2
 Número de columnas: id_autor, nombre
-Cardinalidad: Dependerá del número de autores que insertes en la tabla. Vamos a asumir que puede ser M autores.
+Cardinalidad: Dependerá del número de autores  insertados en la tabla. Vamos a asumir que puede ser M autores.
 
 ## 3. Tabla Adicional 2: Ejemplares
 Grado: 4
 Número de columnas: id_ejemplar, id_libro, ubicacion, estado
-Cardinalidad: Dependerá del número de ejemplares que insertes en la tabla. Vamos a asumir que puede ser P ejemplares.
+Cardinalidad: Dependerá del número de ejemplares  insertados  en la tabla. Vamos a asumir que puede ser P ejemplares.
 
 ## 4. Tabla Adicional 3: Editoriales
 Grado: 2
 Número de columnas: id_editorial, nombre
-Cardinalidad: Dependerá del número de editoriales que insertes en la tabla. Vamos a asumir que puede ser Q editoriales.
+Cardinalidad: Dependerá del número de editoriales insertados en la tabla. Vamos a asumir que puede ser Q editoriales.
 
 ## 5. Tabla Intermedia: LibroAutor
 Grado: 2
@@ -33,40 +33,40 @@ Cardinalidad: Dependerá del número de relaciones entre libros y autores que in
 
 ## Sistema 1: Biblioteca
 
-### Entidades y Atributos
+    ## Entidades y Atributos
 
-#### Libro
-- Título
-- ISBN
-- Fecha de Publicación
+            ### Libro
+            - Título
+            - ISBN
+            - Fecha de Publicación
 
-#### Autor
-- Nombre
-- Fecha de Nacimiento
-- Nacionalidad
+            ### Autor
+            - Nombre
+            - Fecha de Nacimiento
+            - Nacionalidad
 
-#### Género
-- Nombre
-- Descripción
+            ### Género
+            - Nombre
+            - Descripción
 
-#### Miembro
-- Número de Identificación
-- Nombre
-- Dirección
-- Teléfono
-- Correo Electrónico
+            ### Miembro
+            - Número de Identificación
+            - Nombre
+            - Dirección
+            - Teléfono
+            - Correo Electrónico
 
-#### Préstamo
-- Fecha de Inicio
-- Fecha de Devolución
+            ### Préstamo
+            - Fecha de Inicio
+            - Fecha de Devolución
 
 ### Relaciones
-- **Libro-Autor**: Un libro puede tener uno o más autores, y un autor puede haber escrito uno o más libros.
-- **Libro-Género**: Un libro puede pertenecer a uno o más géneros, y un género puede tener uno o más libros.
-- **Miembro-Préstamo**: Un miembro puede tener uno o más préstamos, y un préstamo está asociado a un miembro.
-- **Préstamo-Libro**: Un préstamo puede incluir uno o más libros, y un libro puede ser incluido en diferentes préstamos a lo largo del tiempo.
+    - **Libro-Autor**: Un libro puede tener uno o más autores, y un autor puede haber escrito uno o más libros.
+    - **Libro-Género**: Un libro puede pertenecer a uno o más géneros, y un género puede tener uno o más libros.
+    - **Miembro-Préstamo**: Un miembro puede tener uno o más préstamos, y un préstamo está asociado a un miembro.
+    - **Préstamo-Libro**: Un préstamo puede incluir uno o más libros, y un libro puede ser incluido en diferentes préstamos a lo largo del tiempo.
 
-## Imagen de ER - Biblioteca
+### Imagen de ER - Biblioteca
 ![biblioteca](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/biblioteca.PNG)
 
 
