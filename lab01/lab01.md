@@ -3,10 +3,10 @@
 
 ## EJERCICIO I Cardinalidad
 
-    ### 1. Tabla Principal: Libros
-    Grado: 4
-        Número de columnas: id_libro, titulo, anio_publicacion, genero
-        Cardinalidad: Dependerá del número de libros  insertados en la tabla. Vamos a asumir que puede ser N libros.
+### 1. Tabla Principal: Libros
+Grado: 4
+Número de columnas: id_libro, titulo, anio_publicacion, genero
+Cardinalidad: Dependerá del número de libros  insertados en la tabla. Vamos a asumir que puede ser N libros.
 
 ### 2. Tabla Adicional 1: Autores
 Grado: 2
@@ -26,7 +26,7 @@ Cardinalidad: Dependerá del número de editoriales insertados en la tabla. Vamo
 ### 5. Tabla Intermedia: LibroAutor
 Grado: 2
 Número de columnas: id_libro, id_autor
-Cardinalidad: Dependerá del número de relaciones entre libros y autores que insertes en la tabla. Vamos a asumir que puede ser R relaciones.
+Cardinalidad: Dependerá del número de relaciones entre libros y autores insertados en la tabla. Vamos a asumir que puede ser R relaciones.
 
 <hr>
 
@@ -36,30 +36,30 @@ Cardinalidad: Dependerá del número de relaciones entre libros y autores que in
 
     ## Entidades y Atributos
 
-            ### Libro
-            - Título
-            - ISBN
-            - Fecha de Publicación
+    ### Libro
+        - Título
+        - ISBN
+        - Fecha de Publicación
 
-            ### Autor
-            - Nombre
-            - Fecha de Nacimiento
-            - Nacionalidad
+    ### Autor
+        - Nombre
+        - Fecha de Nacimiento
+        - Nacionalidad
 
-            ### Género
-            - Nombre
-            - Descripción
+    ### Género
+        - Nombre
+        - Descripción
 
-            ### Miembro
-            - Número de Identificación
-            - Nombre
-            - Dirección
-            - Teléfono
-            - Correo Electrónico
+    ### Miembro
+        - Número de Identificación
+        - Nombre
+        - Dirección
+        - Teléfono
+        - Correo Electrónico
 
-            ### Préstamo
-            - Fecha de Inicio
-            - Fecha de Devolución
+    ### Préstamo
+        - Fecha de Inicio
+        - Fecha de Devolución
 
 ### Relaciones
     - **Libro-Autor**: Un libro puede tener uno o más autores, y un autor puede haber escrito uno o más libros.
