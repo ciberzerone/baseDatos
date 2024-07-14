@@ -34,32 +34,32 @@ Cardinalidad: Dependerá del número de relaciones entre libros y autores insert
 
 ## Sistema 1: Biblioteca
 
-    ## Entidades y Atributos
+## Entidades y Atributos
 
-    ### Libro
-        - Título
-        - ISBN
-        - Fecha de Publicación
+### Libro
+- Título
+- ISBN
+- Fecha de Publicación
 
-    ### Autor
-        - Nombre
-        - Fecha de Nacimiento
-        - Nacionalidad
+### Autor
+- Nombre
+- Fecha de Nacimiento
+- Nacionalidad
 
-    ### Género
-        - Nombre
-        - Descripción
+### Género
+- Nombre
+- Descripción
 
-    ### Miembro
-        - Número de Identificación
-        - Nombre
-        - Dirección
-        - Teléfono
-        - Correo Electrónico
+### Miembro
+- Número de Identificación
+- Nombre
+- Dirección
+- Teléfono
+- Correo Electrónico
 
-    ### Préstamo
-        - Fecha de Inicio
-        - Fecha de Devolución
+### Préstamo
+- Fecha de Inicio
+- Fecha de Devolución
 
 ### Relaciones
     - **Libro-Autor**: Un libro puede tener uno o más autores, y un autor puede haber escrito uno o más libros.
@@ -69,6 +69,14 @@ Cardinalidad: Dependerá del número de relaciones entre libros y autores insert
 
 ### Imagen de ER - Biblioteca
 ![biblioteca](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/biblioteca.PNG)
+
+### ER - Biblioteca PDF:
+[Ver PDF](https://github.com/ciberzerone/baseDatos/blob/main/lab01/pdf/biblioteca.pdf)
+
+
+### SQL - Biblioteca PDF:
+[Ver SQL](https://github.com/ciberzerone/baseDatos/blob/main/lab01/sql/biblioteca.sql)
+
 
 
 ## Sistema 2: Supermercado
@@ -113,7 +121,14 @@ Cardinalidad: Dependerá del número de relaciones entre libros y autores insert
 - **Venta-DetalleVenta**: Una venta puede tener varios detalles de venta, y un detalle de venta está asociado a una venta y a un producto.
 
 ## Imagen de ER - Supermercado
-![Supermercado](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/supermercado.PNG)
+[Supermercado](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/supermercado.PNG)
+
+### ER - Biblioteca PDF:
+[Ver PDF](https://github.com/ciberzerone/baseDatos/blob/main/lab01/pdf/supermercado.pdf)
+
+
+### SQL - Biblioteca PDF:
+[Ver SQL](https://github.com/ciberzerone/baseDatos/blob/main/lab01/sql/supermercado.sql)
 
 
 
@@ -162,6 +177,17 @@ Cardinalidad: Dependerá del número de relaciones entre libros y autores insert
 
 ## Imagen de ER - Tienda de Electrodomésticos
 ![Electrodomésticos](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/electodomesticos.PNG)
+
+
+### ER - Electrodomésticos PDF:
+[Ver PDF](https://github.com/ciberzerone/baseDatos/blob/main/lab01/pdf/electodomesticos.pdf)
+
+
+### SQL - Electrodomésticos PDF:
+[Ver SQL](https://github.com/ciberzerone/baseDatos/blob/main/lab01/sql/electodomesticos.sql)
+
+
+
 
 <hr>
 
