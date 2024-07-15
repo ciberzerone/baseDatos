@@ -318,7 +318,7 @@ SELECT genero, COUNT(*) AS num_peliculas FROM Peliculas GROUP BY genero;
 
 ## Imagen de Consulta que devuelva la cantidad de películas de un género
 
-[from Consulta que devuelva la cantidad de películas de un género](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/peliculas_compleja_consulta03.PNG)
+![from Consulta que devuelva la cantidad de películas de un género](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/peliculas_compleja_consulta03.PNG)
 
 
 ### Consulta que devuelva todas las películas con sus actores principales y secundarios
@@ -337,7 +337,7 @@ JOIN Actores ON PeliculasActores.id_actor = Actores.id;
 
 ## Imagen de Consulta que devuelve todas las películas con sus actores principales y secundarios
 
-[from Consulta que devuelve todas las películas con sus actores principales y secundarios](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/peliculas_compleja_consulta04.PNG)
+![from Consulta que devuelve todas las películas con sus actores principales y secundarios](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/peliculas_compleja_consulta04.PNG)
 
 
 ### Consulta que seleccione todas las películas que tengan un actor específico
@@ -352,7 +352,7 @@ WHERE Actores.nombre = 'Tom Hanks';
 ```
 ## Imagen de Consulta que seleccione todas las películas que tengan un actor específico
 
-[from Consulta que seleccione todas las películas que tengan un actor específico](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/peliculas_compleja_consulta05.PNG)
+![from Consulta que seleccione todas las películas que tengan un actor específico](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/peliculas_compleja_consulta05.PNG)
 
 
 
@@ -384,4 +384,4 @@ COMMIT;
 
 ## Imagen de Consulta que seleccione todas las películas que tengan un actor específico
 
-[from Consulta que seleccione todas las películas que tengan un actor específico](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/peliculas_compleja_consulta06.PNG)
+![from Consulta que seleccione todas las películas que tengan un actor específico](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/peliculas_compleja_consulta06.PNG)
