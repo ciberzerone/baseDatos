@@ -200,6 +200,8 @@ Ejemplos de consultas SQL básicas para interactuar con la base de datos de peli
 
 ## Imagen de base datos: peliculas_db
 ![Electrodomésticos](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/tabla_peliculas_dbpeliculas.PNG)
+## Imagen de base datos: peliculas_db
+![peliculas_db](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/electodomesticos.PNG)
 
 
 ### SQL - peliculas_db:
