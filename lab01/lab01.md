@@ -30,6 +30,8 @@ Cardinalidad: Dependerá del número de relaciones entre libros y autores insert
 
 <hr>
 
+
+
 ### EJERCICIO II Descripción de Entidades, Atributos y Relaciones
 
 ## Sistema 1: Biblioteca
@@ -290,7 +292,7 @@ SELECT * FROM Peliculas;
 ```
 ## Imagen de consulta que devuelva todas las películas
 
-[from consulta que devuelva todas las películas](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/peliculas_complejo_consulta01.PNG)
+[from consulta que devuelva todas las películas](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/peliculas_compleja_consulta01.PNG)
 
 
 
@@ -300,7 +302,7 @@ SELECT * FROM Peliculas WHERE anio BETWEEN 1980 AND 2000;
 ```
 ## Imagen de Consulta que devuelva las películas entre 1980 y 2000
 
-[from Consulta que devuelva las películas entre 1980 y 2000](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/peliculas_complejo_consulta02.PNG)
+[from Consulta que devuelva las películas entre 1980 y 2000](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/peliculas_compleja_consulta02.PNG)
 
 
 
@@ -311,7 +313,7 @@ SELECT genero, COUNT(*) AS num_peliculas FROM Peliculas GROUP BY genero;
 
 ## Imagen de Consulta que devuelva la cantidad de películas de un género
 
-[from Consulta que devuelva la cantidad de películas de un género](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/peliculas_complejo_consulta03.PNG)
+[from Consulta que devuelva la cantidad de películas de un género](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/peliculas_compleja_consulta03.PNG)
 
 
 ### Consulta que devuelva todas las películas con sus actores principales y secundarios
@@ -330,7 +332,7 @@ JOIN Actores ON PeliculasActores.id_actor = Actores.id;
 
 ## Imagen de Consulta que devuelve todas las películas con sus actores principales y secundarios
 
-[from Consulta que devuelve todas las películas con sus actores principales y secundarios](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/peliculas_complejo_consulta04.PNG)
+[from Consulta que devuelve todas las películas con sus actores principales y secundarios](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/peliculas_compleja_consulta04.PNG)
 
 
 ### Consulta que seleccione todas las películas que tengan un actor específico
@@ -345,7 +347,7 @@ WHERE Actores.nombre = 'Tom Hanks';
 ```
 ## Imagen de Consulta que seleccione todas las películas que tengan un actor específico
 
-[from Consulta que seleccione todas las películas que tengan un actor específico](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/peliculas_complejo_consulta05.PNG)
+[from Consulta que seleccione todas las películas que tengan un actor específico](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/peliculas_compleja_consulta05.PNG)
 
 
 
@@ -377,4 +379,4 @@ COMMIT;
 
 ## Imagen de Consulta que seleccione todas las películas que tengan un actor específico
 
-[from Consulta que seleccione todas las películas que tengan un actor específico](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/peliculas_complejo_consulta06.PNG)
+[from Consulta que seleccione todas las películas que tengan un actor específico](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/peliculas_compleja_consulta06.PNG)
