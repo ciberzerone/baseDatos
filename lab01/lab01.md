@@ -199,9 +199,8 @@ Cardinalidad: Dependerá del número de relaciones entre libros y autores insert
 Ejemplos de consultas SQL básicas para interactuar con la base de datos de peliculas_db. 
 
 ## Imagen de base datos: peliculas_db
-![Electrodomésticos](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/tabla_peliculas_dbpeliculas.PNG)
-## Imagen de base datos: peliculas_db
-![peliculas_db](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/electodomesticos.PNG)
+![peliculas_db](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/tabla_peliculas_dbpeliculas.PNG)
+
 
 
 ### SQL - peliculas_db:
@@ -220,8 +219,9 @@ Ejemplos de consultas SQL básicas para interactuar con la base de datos de peli
 	SELECT * FROM Peliculas;
 ```
 
-## Imagen de consulta * from Peliculas
-[from Peliculas](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/peliculas_db_consulta01.PNG)
+
+## Imagen de base datos: peliculas_db
+![peliculas_db](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/peliculas_db_consulta01.PNG)
 
 
 
