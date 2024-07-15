@@ -297,7 +297,7 @@ SELECT * FROM Peliculas;
 ```
 ## Imagen de consulta que devuelva todas las películas
 
-[from consulta que devuelva todas las películas](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/peliculas_compleja_consulta01.PNG)
+![from consulta que devuelva todas las películas](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/peliculas_compleja_consulta01.PNG)
 
 
 
@@ -307,7 +307,7 @@ SELECT * FROM Peliculas WHERE anio BETWEEN 1980 AND 2000;
 ```
 ## Imagen de Consulta que devuelva las películas entre 1980 y 2000
 
-[from Consulta que devuelva las películas entre 1980 y 2000](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/peliculas_compleja_consulta02.PNG)
+![from Consulta que devuelva las películas entre 1980 y 2000](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/peliculas_compleja_consulta02.PNG)
 
 
 
