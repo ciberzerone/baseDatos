@@ -234,7 +234,8 @@ SELECT * FROM peliculas_db.peliculas WHERE director = 'Christopher Nolan';
 ```
 ## Imagen de consulta WHERE director = 'Christopher Nolan'
 
-[from Director Christopher Nolan ](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/peliculas_db_consulta02.PNG)
+
+![nolan](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/peliculas_db_consulta02.PNG)
 
 
 
@@ -246,7 +247,7 @@ SELECT * FROM peliculas_db.peliculas p ORDER BY anio DESC;
 ```
 
 ## Imagen de consulta películas por año de lanzamiento en orden descendente
-![anio](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/peliculas_db_consulta02.PNG)
+![anio](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/peliculas_db_consulta03.PNG)
 
 
 
