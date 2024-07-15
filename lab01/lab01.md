@@ -274,23 +274,16 @@ SELECT genero, COUNT(*) as cantidad FROM Peliculas GROUP BY genero;
 
 Consultas SQL y funciones para interactuar con la base de datos peliculas_complejas. Estos ejemplos muestran cómo realizar consultas básicas, insertar datos en múltiples tablas y gestionar transacciones.
 
-## SQL - peliculas_db:
+## SQL - peliculas_compleja:
 [Ver SQL](https://github.com/ciberzerone/baseDatos/blob/main/lab01/sql/peliculas_complejo.sql)
-
-## Imagen de base datos: peliculas_db
-![Electrodomésticos](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/tabla_peliculas_dbpeliculas.PNG)
-
-
-## SQL - peliculas_db:
-[Ver SQL](https://github.com/ciberzerone/baseDatos/blob/main/lab01/sql/peliculas_db.sql)
-
-
 
 
 
 ### Consultas SQL
 
-## Consulta que devuelva todas las películas
+
+
+### Consulta que devuelva todas las películas
 
 ```sql
 SELECT * FROM Peliculas;
@@ -301,7 +294,7 @@ SELECT * FROM Peliculas;
 
 
 
-## Consulta que devuelva las películas entre 1980 y 2000
+### Consulta que devuelva las películas entre 1980 y 2000
 ```sql
 SELECT * FROM Peliculas WHERE anio BETWEEN 1980 AND 2000;
 ```
@@ -311,7 +304,7 @@ SELECT * FROM Peliculas WHERE anio BETWEEN 1980 AND 2000;
 
 
 
-## Consulta que devuelva la cantidad de películas de un género
+### Consulta que devuelva la cantidad de películas de un género
 ```sql
 SELECT genero, COUNT(*) AS num_peliculas FROM Peliculas GROUP BY genero;
 ```
@@ -321,7 +314,7 @@ SELECT genero, COUNT(*) AS num_peliculas FROM Peliculas GROUP BY genero;
 [from Consulta que devuelva la cantidad de películas de un género](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/peliculas_complejo_consulta03.PNG)
 
 
-## Consulta que devuelva todas las películas con sus actores principales y secundarios
+### Consulta que devuelva todas las películas con sus actores principales y secundarios
 ```sql
 SELECT 
     Peliculas.titulo, 
@@ -340,7 +333,7 @@ JOIN Actores ON PeliculasActores.id_actor = Actores.id;
 [from Consulta que devuelve todas las películas con sus actores principales y secundarios](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/peliculas_complejo_consulta04.PNG)
 
 
-## Consulta que seleccione todas las películas que tengan un actor específico
+### Consulta que seleccione todas las películas que tengan un actor específico
 ```sql
 SELECT 
     Peliculas.titulo, 
@@ -358,7 +351,7 @@ WHERE Actores.nombre = 'Tom Hanks';
 
 
 
-## Insertar Datos en Varias Tablas a la Vez usando START TRANSACTION y COMMIT
+### Insertar Datos en Varias Tablas a la Vez usando START TRANSACTION y COMMIT
 ```sql
 START TRANSACTION;
 
