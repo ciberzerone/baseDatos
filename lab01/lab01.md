@@ -122,8 +122,9 @@ Cardinalidad: Dependerá del número de relaciones entre libros y autores insert
 - **Cliente-Venta**: Un cliente puede realizar una o más ventas, y una venta está asociada a un cliente.
 - **Venta-DetalleVenta**: Una venta puede tener varios detalles de venta, y un detalle de venta está asociado a una venta y a un producto.
 
-## Imagen de ER - Supermercado
-[Supermercado](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/supermercado.PNG)
+
+### Imagen de ER - Supermercado
+![Supermercado](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/supermercado.PNG)
 
 ### ER - Biblioteca PDF:
 [Ver PDF](https://github.com/ciberzerone/baseDatos/blob/main/lab01/pdf/supermercado.pdf)
