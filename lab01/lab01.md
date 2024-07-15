@@ -295,7 +295,7 @@ Consultas SQL y funciones para interactuar con la base de datos peliculas_comple
 ```sql
 SELECT * FROM Peliculas;
 ```
-### Imagen de consulta que devuelva todas las películas
+## Imagen de consulta que devuelva todas las películas
 
 [from consulta que devuelva todas las películas](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/peliculas_complejo_consulta01.PNG)
 
@@ -305,7 +305,7 @@ SELECT * FROM Peliculas;
 ```sql
 SELECT * FROM Peliculas WHERE anio BETWEEN 1980 AND 2000;
 ```
-### Imagen de Consulta que devuelva las películas entre 1980 y 2000
+## Imagen de Consulta que devuelva las películas entre 1980 y 2000
 
 [from Consulta que devuelva las películas entre 1980 y 2000](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/peliculas_complejo_consulta02.PNG)
 
@@ -316,7 +316,7 @@ SELECT * FROM Peliculas WHERE anio BETWEEN 1980 AND 2000;
 SELECT genero, COUNT(*) AS num_peliculas FROM Peliculas GROUP BY genero;
 ```
 
-### Imagen de Consulta que devuelva la cantidad de películas de un género
+## Imagen de Consulta que devuelva la cantidad de películas de un género
 
 [from Consulta que devuelva la cantidad de películas de un género](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/peliculas_complejo_consulta03.PNG)
 
@@ -335,12 +335,12 @@ JOIN Actores ON PeliculasActores.id_actor = Actores.id;
 ```
 
 
-### Imagen de Consulta que devuelve todas las películas con sus actores principales y secundarios
+## Imagen de Consulta que devuelve todas las películas con sus actores principales y secundarios
 
 [from Consulta que devuelve todas las películas con sus actores principales y secundarios](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/peliculas_complejo_consulta04.PNG)
 
 
-### Consulta que seleccione todas las películas que tengan un actor específico
+## Consulta que seleccione todas las películas que tengan un actor específico
 ```sql
 SELECT 
     Peliculas.titulo, 
@@ -350,7 +350,7 @@ JOIN PeliculasActores ON Peliculas.id = PeliculasActores.id_pelicula
 JOIN Actores ON PeliculasActores.id_actor = Actores.id
 WHERE Actores.nombre = 'Tom Hanks';
 ```
-### Imagen de Consulta que seleccione todas las películas que tengan un actor específico
+## Imagen de Consulta que seleccione todas las películas que tengan un actor específico
 
 [from Consulta que seleccione todas las películas que tengan un actor específico](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/peliculas_complejo_consulta05.PNG)
 
@@ -382,6 +382,6 @@ COMMIT;
 ```
 
 
-### Imagen de Consulta que seleccione todas las películas que tengan un actor específico
+## Imagen de Consulta que seleccione todas las películas que tengan un actor específico
 
 [from Consulta que seleccione todas las películas que tengan un actor específico](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/peliculas_complejo_consulta06.PNG)
