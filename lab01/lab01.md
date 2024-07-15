@@ -74,7 +74,7 @@ Cardinalidad: Dependerá del número de relaciones entre libros y autores insert
 [Ver PDF](https://github.com/ciberzerone/baseDatos/blob/main/lab01/pdf/biblioteca.pdf)
 
 
-### SQL - Biblioteca PDF:
+### SQL - Biblioteca:
 [Ver SQL](https://github.com/ciberzerone/baseDatos/blob/main/lab01/sql/biblioteca.sql)
 
 
@@ -127,7 +127,7 @@ Cardinalidad: Dependerá del número de relaciones entre libros y autores insert
 [Ver PDF](https://github.com/ciberzerone/baseDatos/blob/main/lab01/pdf/supermercado.pdf)
 
 
-### SQL - Biblioteca PDF:
+### SQL - Biblioteca:
 [Ver SQL](https://github.com/ciberzerone/baseDatos/blob/main/lab01/sql/supermercado.sql)
 
 
@@ -183,7 +183,7 @@ Cardinalidad: Dependerá del número de relaciones entre libros y autores insert
 [Ver PDF](https://github.com/ciberzerone/baseDatos/blob/main/lab01/pdf/electrodomesticos.pdf)
 
 
-### SQL - Electrodomésticos PDF:
+### SQL - Electrodomésticos:
 [Ver SQL](https://github.com/ciberzerone/baseDatos/blob/main/lab01/sql/electrodomesticos.sql)
 
 
@@ -193,7 +193,17 @@ Cardinalidad: Dependerá del número de relaciones entre libros y autores insert
 
 ### EJERCICIO III  Consultas Básicas en SQL para la Base de Datos de Películas
 
-Este documento proporciona ejemplos de consultas SQL básicas para interactuar con la base de datos de películas. Estas consultas permiten obtener información específica sobre las películas almacenadas, tales como la lista completa de películas, películas dirigidas por un director específico, ordenamiento por año de lanzamiento, y conteo de películas por género.
+Ejemplos de consultas SQL básicas para interactuar con la base de datos de peliculas_db. 
+
+## Imagen de base datos: peliculas_db
+![Electrodomésticos](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/tabla_peliculas_dbpeliculas.PNG)
+
+
+### SQL - peliculas_db:
+[Ver SQL](https://github.com/ciberzerone/baseDatos/blob/main/lab01/sql/peliculas_db.sql)
+
+
+
 
 ## Consultas SQL
 
@@ -205,25 +215,46 @@ Este documento proporciona ejemplos de consultas SQL básicas para interactuar c
 	SELECT * FROM Peliculas;
 ```
 
+## Imagen de consulta * from Peliculas
+[from Peliculas](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/peliculas_db_consulta01.PNG)
+
+
+
+
 ### 2. Consultar películas de Christopher Nolan
 	Esta consulta devuelve todas las películas dirigidas por Christopher Nolan.
 
 ```sql
-SELECT * FROM Peliculas WHERE director = 'Christopher Nolan';
+SELECT * FROM peliculas_db.peliculas WHERE director = 'Christopher Nolan';
 ```
+## Imagen de consulta WHERE director = 'Christopher Nolan'
+
+[from Director Christopher Nolan ](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/peliculas_db_consulta02.PNG)
+
+
+
 ### 3. Consultar películas ordenadas por año (descendente)
 	Esta consulta ordena las películas por año de lanzamiento en orden descendente.
 
 ```sql
-SELECT * FROM Peliculas ORDER BY anio DESC;
+SELECT * FROM peliculas_db.peliculas p ORDER BY anio DESC;
 ```
+
+## Imagen de consulta películas por año de lanzamiento en orden descendente
+
+[from películas por año de lanzamiento en orden descendente](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/peliculas_db_consulta03.PNG)
+
 
 ### 4. Consultar películas lanzadas entre 1990 y 2000
 	Esta consulta devuelve las películas que fueron lanzadas entre los años 1990 y 2000.
 
 ```sql
-SELECT * FROM Peliculas WHERE anio BETWEEN 1990 AND 2000;
+SELECT * from peliculas_db.peliculas WHERE anio BETWEEN 1990 AND 2000;
 ```
+
+## Imagen de consulta películas lanzadas entre 1990 y 2000
+
+[from películas lanzadas entre 1990 y 2000](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/peliculas_db_consulta04.PNG)
 
 ### 5. Consultar la cantidad de películas por género
 	Esta consulta devuelve la cantidad de películas disponibles en cada género.
@@ -232,13 +263,30 @@ SELECT genero, COUNT(*) as cantidad FROM Peliculas GROUP BY genero;
 ```
 
 
+## Imagen de consulta la cantidad de películas por género
+
+[from la cantidad de películas por género](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/peliculas_db_consulta05.PNG)
 
 
 <hr>
 
 ### EJERCICIO IV Bases de Datos con Relaciones - Complejo:  Realizar Consultas y Funciones
 
-Este documento proporciona ejemplos de consultas SQL y funciones para interactuar con la base de datos de películas. Estos ejemplos muestran cómo realizar consultas básicas, insertar datos en múltiples tablas y gestionar transacciones.
+Consultas SQL y funciones para interactuar con la base de datos peliculas_complejas. Estos ejemplos muestran cómo realizar consultas básicas, insertar datos en múltiples tablas y gestionar transacciones.
+
+### SQL - peliculas_db:
+[Ver SQL](https://github.com/ciberzerone/baseDatos/blob/main/lab01/sql/peliculas_complejo.sql)
+
+## Imagen de base datos: peliculas_db
+![Electrodomésticos](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/tabla_peliculas_dbpeliculas.PNG)
+
+
+### SQL - peliculas_db:
+[Ver SQL](https://github.com/ciberzerone/baseDatos/blob/main/lab01/sql/peliculas_db.sql)
+
+
+
+
 
 ## Consultas SQL
 
@@ -247,16 +295,31 @@ Este documento proporciona ejemplos de consultas SQL y funciones para interactua
 ```sql
 SELECT * FROM Peliculas;
 ```
+### Imagen de consulta que devuelva todas las películas
+
+[from consulta que devuelva todas las películas](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/peliculas_complejo_consulta01.PNG)
+
+
 
 ### Consulta que devuelva las películas entre 1980 y 2000
 ```sql
 SELECT * FROM Peliculas WHERE anio BETWEEN 1980 AND 2000;
 ```
+### Imagen de Consulta que devuelva las películas entre 1980 y 2000
+
+[from Consulta que devuelva las películas entre 1980 y 2000](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/peliculas_complejo_consulta02.PNG)
+
+
 
 ### Consulta que devuelva la cantidad de películas de un género
 ```sql
 SELECT genero, COUNT(*) AS num_peliculas FROM Peliculas GROUP BY genero;
 ```
+
+### Imagen de Consulta que devuelva la cantidad de películas de un género
+
+[from Consulta que devuelva la cantidad de películas de un género](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/peliculas_complejo_consulta03.PNG)
+
 
 ### Consulta que devuelva todas las películas con sus actores principales y secundarios
 ```sql
@@ -271,6 +334,12 @@ JOIN PeliculasActores ON Peliculas.id = PeliculasActores.id_pelicula
 JOIN Actores ON PeliculasActores.id_actor = Actores.id;
 ```
 
+
+### Imagen de Consulta que devuelve todas las películas con sus actores principales y secundarios
+
+[from Consulta que devuelve todas las películas con sus actores principales y secundarios](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/peliculas_complejo_consulta04.PNG)
+
+
 ### Consulta que seleccione todas las películas que tengan un actor específico
 ```sql
 SELECT 
@@ -281,25 +350,38 @@ JOIN PeliculasActores ON Peliculas.id = PeliculasActores.id_pelicula
 JOIN Actores ON PeliculasActores.id_actor = Actores.id
 WHERE Actores.nombre = 'Tom Hanks';
 ```
+### Imagen de Consulta que seleccione todas las películas que tengan un actor específico
+
+[from Consulta que seleccione todas las películas que tengan un actor específico](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/peliculas_complejo_consulta05.PNG)
+
+
+
 
 
 ### Insertar Datos en Varias Tablas a la Vez usando START TRANSACTION y COMMIT
 ```sql
 START TRANSACTION;
 
-INSERT INTO Directores (nombre) VALUES ('Nuevo Director');
-SET @id_director = LAST_INSERT_ID();
+-- Insertar un nuevo director y obtener su ID
+INSERT INTO Directores (nombre) VALUES ('Jarko');
+SET @id_director := LAST_INSERT_ID();
 
-INSERT INTO Peliculas (titulo, anio, genero, id_director) VALUES ('Nueva Pelicula', 2024, 'Accion', @id_director);
-SET @id_pelicula = LAST_INSERT_ID();
+-- Insertar una nueva película y obtener su ID
+INSERT INTO Peliculas (titulo, anio, genero) VALUES ('Iron Hack', 2024, 'Accion');
+SET @id_pelicula := LAST_INSERT_ID();
 
-INSERT INTO Actores (nombre) VALUES ('Nuevo Actor');
-SET @id_actor = LAST_INSERT_ID();
+-- Insertar un nuevo actor y obtener su ID
+INSERT INTO Actores (nombre) VALUES ('Yimmmy');
+SET @id_actor := LAST_INSERT_ID();
 
+-- Insertar en la tabla PeliculasActores con la relación de la película y el actor
 INSERT INTO PeliculasActores (id_pelicula, id_actor, rol) VALUES (@id_pelicula, @id_actor, 'principal');
 
 COMMIT;
+
 ```
 
 
+### Imagen de Consulta que seleccione todas las películas que tengan un actor específico
 
+[from Consulta que seleccione todas las películas que tengan un actor específico](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/peliculas_complejo_consulta06.PNG)

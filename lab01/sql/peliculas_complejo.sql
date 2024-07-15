@@ -1,6 +1,25 @@
-DROP peliculas_complejo  IF EXISTS;
-CREATE DATABASE peliculas_complejo;
 USE peliculas_complejo;
+
+CREATE TABLE Directores (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255) NOT NULL
+);
+CREATE TABLE Actores (
+   id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS PeliculasActores (
+    id_pelicula INT NOT NULL,
+    id_actor INT NOT NULL,
+    rol VARCHAR(50),
+    PRIMARY KEY (id_pelicula, id_actor),
+    FOREIGN KEY (id_pelicula) REFERENCES Peliculas(id) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (id_actor) REFERENCES Actores(id) ON DELETE CASCADE ON UPDATE CASCADE,
+    INDEX idx_id_pelicula (id_pelicula),
+    INDEX idx_id_actor (id_actor)
+);
+
 
 CREATE TABLE Peliculas (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -11,52 +30,214 @@ CREATE TABLE Peliculas (
     FOREIGN KEY (id_director) REFERENCES Directores(id)
 );
 
-CREATE TABLE Directores (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    nombre VARCHAR(255) NOT NULL
-);
-
-CREATE TABLE Actores (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    nombre VARCHAR(255) NOT NULL
-);
-
-CREATE TABLE PeliculasActores (
-    id_pelicula INT,
-    id_actor INT,
-    rol VARCHAR(50),  -- Ej. 'principal' o 'secundario'
-    FOREIGN KEY (id_pelicula) REFERENCES Peliculas(id),
-    FOREIGN KEY (id_actor) REFERENCES Actores(id),
-    PRIMARY KEY (id_pelicula, id_actor)
-);
 
 INSERT INTO Directores (nombre) VALUES 
 ('Steven Spielberg'),
 ('Christopher Nolan'),
 ('Quentin Tarantino'),
--- agrega más directores según sea necesario
-;
+('Martin Scorsese'),
+('James Cameron'),
+('Ridley Scott'),
+('Peter Jackson'),
+('Alfonso Cuarón'),
+('David Fincher'),
+('Clint Eastwood'),
+('Francis Ford Coppola'),
+('George Lucas'),
+('Tim Burton'),
+('Stanley Kubrick'),
+('Alfred Hitchcock'),
+('Woody Allen'),
+('Sofia Coppola'),
+('Wes Anderson'),
+('Guillermo del Toro'),
+('Akira Kurosawa'),
+('Hayao Miyazaki'),
+('David Lynch'),
+('Paul Thomas Anderson'),
+('Michael Bay'),
+('Ron Howard'),
+('Robert Zemeckis'),
+('Spike Lee'),
+('Joel Coen'),
+('Ethan Coen'),
+('Sam Mendes'),
+('Oliver Stone'),
+('Baz Luhrmann'),
+('Ang Lee'),
+('Denis Villeneuve'),
+('Taika Waititi'),
+('Greta Gerwig'),
+('Jordan Peele'),
+('Kenneth Branagh'),
+('Patty Jenkins'),
+('Peter Weir'),
+('John Carpenter'),
+('James Wan'),
+('Michael Mann'),
+('J.J. Abrams'),
+('Damien Chazelle'),
+('Richard Linklater'),
+('Terrence Malick'),
+('Brian De Palma'),
+('Jane Campion'),
+('Luc Besson');
+
+
 
 INSERT INTO Actores (nombre) VALUES 
 ('Tom Hanks'),
 ('Leonardo DiCaprio'),
 ('Meryl Streep'),
--- agrega más actores según sea necesario
-;
-
+('Robert De Niro'),
+('Morgan Freeman'),
+('Brad Pitt'),
+('Angelina Jolie'),
+('Johnny Depp'),
+('Scarlett Johansson'),
+('Jennifer Lawrence'),
+('Matt Damon'),
+('Christian Bale'),
+('Kate Winslet'),
+('Natalie Portman'),
+('Tom Cruise'),
+('Denzel Washington'),
+('Will Smith'),
+('Julia Roberts'),
+('George Clooney'),
+('Anne Hathaway'),
+('Robert Downey Jr.'),
+('Chris Hemsworth'),
+('Chris Evans'),
+('Mark Ruffalo'),
+('Jeremy Renner'),
+('Tom Holland'),
+('Benedict Cumberbatch'),
+('Chadwick Boseman'),
+('Brie Larson'),
+('Paul Rudd'),
+('Elizabeth Olsen'),
+('Chris Pratt'),
+('Zoe Saldana'),
+('Dave Bautista'),
+('Bradley Cooper'),
+('Vin Diesel'),
+('Josh Brolin'),
+('Samuel L. Jackson'),
+('Jake Gyllenhaal'),
+('Hugh Jackman'),
+('Patrick Stewart'),
+('Ian McKellen'),
+('Halle Berry'),
+('Ryan Reynolds'),
+('Blake Lively'),
+('Emma Stone'),
+('Ryan Gosling'),
+('Sandra Bullock'),
+('Matthew McConaughey');
 
 INSERT INTO Peliculas (titulo, anio, genero, id_director) VALUES 
 ('Inception', 2010, 'Sci-Fi', 2),
-('Titanic', 1997, 'Romance', 1),
+('Titanic', 1997, 'Romance', 5),
 ('Pulp Fiction', 1994, 'Crime', 3),
--- agrega más películas hasta tener al menos 50
-;
+('The Godfather', 1972, 'Crime', 4),
+('The Dark Knight', 2008, 'Action', 2),
+('Schindler\'s List', 1993, 'Biography', 1),
+('The Shawshank Redemption', 1994, 'Drama', 6),
+('The Lord of the Rings: The Return of the King', 2003, 'Fantasy', 7),
+('Forrest Gump', 1994, 'Drama', 1),
+('Gladiator', 2000, 'Action', 6),
+('The Matrix', 1999, 'Sci-Fi', 8),
+('Fight Club', 1999, 'Drama', 9),
+('Interstellar', 2014, 'Adventure', 2),
+('The Silence of the Lambs', 1991, 'Thriller', 4),
+('Saving Private Ryan', 1998, 'War', 1),
+('Braveheart', 1995, 'Biography', 6),
+('The Departed', 2006, 'Crime', 4),
+('Se7en', 1995, 'Crime', 9),
+('The Usual Suspects', 1995, 'Crime', 8),
+('The Green Mile', 1999, 'Crime', 1),
+('Django Unchained', 2012, 'Drama', 3),
+('The Wolf of Wall Street', 2013, 'Biography', 4),
+('Mad Max: Fury Road', 2015, 'Action', 6),
+('The Revenant', 2015, 'Adventure', 2),
+('The Social Network', 2010, 'Biography', 9),
+('The Pianist', 2002, 'Biography', 10),
+('Slumdog Millionaire', 2008, 'Drama', 7),
+('The Sixth Sense', 1999, 'Mystery', 8),
+('Inglourious Basterds', 2009, 'Adventure', 3),
+('Memento', 2000, 'Mystery', 2),
+('American Beauty', 1999, 'Drama', 9),
+('La La Land', 2016, 'Drama', 10),
+('Gravity', 2013, 'Sci-Fi', 8),
+('Black Swan', 2010, 'Drama', 10),
+('The Prestige', 2006, 'Drama', 2),
+('Whiplash', 2014, 'Drama', 9),
+('The Great Gatsby', 2013, 'Drama', 10),
+('A Beautiful Mind', 2001, 'Biography', 4),
+('No Country for Old Men', 2007, 'Crime', 10),
+('Goodfellas', 1990, 'Biography', 4),
+('The Lion King', 1994, 'Animation', 1),
+('Toy Story', 1995, 'Animation', 1),
+('Up', 2009, 'Animation', 1),
+('Finding Nemo', 2003, 'Animation', 1),
+('WALL-E', 2008, 'Animation', 1),
+('The Incredibles', 2004, 'Animation', 1),
+('Monsters, Inc.', 2001, 'Animation', 1),
+('Ratatouille', 2007, 'Animation', 1),
+('Coco', 2017, 'Animation', 1),
+('Parasite', 2019, 'Thriller', 47),
+('Joker', 2019, 'Crime', 48);
+
 
 INSERT INTO PeliculasActores (id_pelicula, id_actor, rol) VALUES 
 (1, 2, 'principal'),
-(2, 3, 'principal'),
-(3, 1, 'secundario'),
--- agrega más relaciones según sea necesario
-;
-
-
+(2, 1, 'principal'),
+(3, 3, 'principal'),
+(4, 4, 'principal'),
+(5, 11, 'principal'),
+(6, 5, 'principal'),
+(7, 6, 'principal'),
+(8, 7, 'principal'),
+(9, 8, 'principal'),
+(10, 9, 'principal'),
+(11, 10, 'principal'),
+(12, 11, 'principal'),
+(13, 12, 'principal'),
+(14, 13, 'principal'),
+(15, 14, 'principal'),
+(16, 15, 'principal'),
+(17, 16, 'principal'),
+(18, 17, 'principal'),
+(19, 18, 'principal'),
+(20, 19, 'principal'),
+(21, 20, 'principal'),
+(22, 1, 'secundario'),
+(23, 2, 'secundario'),
+(24, 3, 'secundario'),
+(25, 4, 'secundario'),
+(26, 5, 'secundario'),
+(27, 6, 'secundario'),
+(28, 7, 'secundario'),
+(29, 8, 'secundario'),
+(30, 9, 'secundario'),
+(31, 10, 'secundario'),
+(32, 11, 'secundario'),
+(33, 12, 'secundario'),
+(34, 13, 'secundario'),
+(35, 14, 'secundario'),
+(36, 15, 'secundario'),
+(37, 16, 'secundario'),
+(38, 17, 'secundario'),
+(39, 18, 'secundario'),
+(40, 19, 'secundario'),
+(41, 20, 'secundario'),
+(42, 1, 'principal'),
+(43, 2, 'principal'),
+(44, 3, 'principal'),
+(45, 4, 'principal'),
+(46, 5, 'principal'),
+(47, 6, 'principal'),
+(48, 7, 'principal'),
+(49, 8, 'principal'),
+(50, 9, 'principal');
