@@ -288,7 +288,7 @@ Consultas SQL y funciones para interactuar con la base de datos peliculas_comple
 
 
 
-## Consultas SQL
+### Consultas SQL
 
 ## Consulta que devuelva todas las películas
 
