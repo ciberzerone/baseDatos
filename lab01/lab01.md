@@ -220,7 +220,7 @@ Ejemplos de consultas SQL básicas para interactuar con la base de datos de peli
 ```
 
 
-## Imagen de base datos: peliculas_db
+## Imagen de base datos: Consultar todas las películas
 ![peliculas_db](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/peliculas_db_consulta01.PNG)
 
 
@@ -246,8 +246,8 @@ SELECT * FROM peliculas_db.peliculas p ORDER BY anio DESC;
 ```
 
 ## Imagen de consulta películas por año de lanzamiento en orden descendente
+![anio](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/peliculas_db_consulta02.PNG)
 
-[from películas por año de lanzamiento en orden descendente](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/peliculas_db_consulta03.PNG)
 
 
 ### 4. Consultar películas lanzadas entre 1990 y 2000
@@ -259,7 +259,8 @@ SELECT * from peliculas_db.peliculas WHERE anio BETWEEN 1990 AND 2000;
 
 ## Imagen de consulta películas lanzadas entre 1990 y 2000
 
-[from películas lanzadas entre 1990 y 2000](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/peliculas_db_consulta04.PNG)
+![entre](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/peliculas_db_consulta04.PNG)
+
 
 ### 5. Consultar la cantidad de películas por género
 	Esta consulta devuelve la cantidad de películas disponibles en cada género.
@@ -270,7 +271,7 @@ SELECT genero, COUNT(*) as cantidad FROM Peliculas GROUP BY genero;
 
 ## Imagen de consulta la cantidad de películas por género
 
-[from la cantidad de películas por género](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/peliculas_db_consulta05.PNG)
+![genero](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/peliculas_db_consulta05.PNG)
 
 
 <hr>
