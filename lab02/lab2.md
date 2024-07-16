@@ -45,10 +45,19 @@ Basado en el diagrama de entidad-relación (ER) proporcionado, las entidades y a
   - reserva_id (FK)
   - servicio_id (FK)
 
-### Relaciones
 
-- **One-to-One**: Cliente y Habitación (aunque típicamente una habitación puede ser reservada por varios clientes a lo largo del tiempo, para la asignación específica, se considera one-to-one).
-- **One-to-Many**: Hotel y Habitación (un hotel tiene muchas habitaciones).
-- **Many-to-Many**: Reserva y Servicio (una reserva puede tener muchos servicios y un servicio puede estar en muchas reservas).
 
 <hr>
+
+## Parte II: Implementación de Relaciones
+
+2. **One-to-One**: Cliente y Habitación (aunque típicamente una habitación puede ser reservada por varios clientes a lo largo del tiempo, para la asignación específica, se considera one-to-one).
+3. **One-to-Many**: Hotel y Habitación (un hotel tiene muchas habitaciones).
+4. **Many-to-Many**: Reserva y Servicio (una reserva puede tener muchos servicios y un servicio puede estar en muchas reservas).
+
+
+## Parte III: Alteración de Tablas
+5. Realizar modificaciones 
+
+
+## Parte IV: Alteración de Tablas
