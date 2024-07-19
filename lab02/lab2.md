@@ -172,7 +172,7 @@ WHERE
 
 - Utilizar subconsultas para obtener la cantidad total de reservas realizadas en un hotel específico en un mes determinado.
 ### tabla Reserva 
-![tabla reserva ](https://github.com/ciberzerone/baseDatos/blob/main/lab02/imagen/parteIV_servicio.PNG)
+![tabla reserva ](https://github.com/ciberzerone/baseDatos/blob/main/lab02/imagen/consulta7TablaReserva.PNG)
 
 
 ```sql
@@ -185,7 +185,7 @@ SELECT
      AND YEAR(r.fecha_inicio) = 2024) AS total_reservas
 ```
 ### reservas realizadas en un hotel específico en Agosto 
-![reservas realizadas en un hotel específico en Agosto](https://github.com/ciberzerone/baseDatos/blob/main/lab02/imagen/parteIV_servicio.PNG)
+![reservas realizadas en un hotel específico en Agosto](https://github.com/ciberzerone/baseDatos/blob/main/lab02/imagen/consulta7TablaReservaMesAgosto.PNG)
 
 
 
@@ -199,7 +199,7 @@ SELECT
      AND YEAR(r.fecha_inicio) = 2024) AS total_reservas
 ```
 ### reservas realizadas en un hotel específico en Julio 
-![reservas realizadas en un hotel específico en julio](https://github.com/ciberzerone/baseDatos/blob/main/lab02/imagen/parteIV_servicio.PNG)
+![reservas realizadas en un hotel específico en julio](https://github.com/ciberzerone/baseDatos/blob/main/lab02/imagen/consulta7TablaReservaMesJulio.PNG)
 
 
 8. Indexación y Optimización
