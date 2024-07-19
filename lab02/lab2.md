@@ -93,7 +93,7 @@ ON DUPLICATE KEY UPDATE
 ```
 
 ### Imagen de ER - Gestion de Hotel
-![Gestion Hotel](https://github.com/ciberzerone/baseDatos/blob/main/lab02/imagen/parteIII_alteracionTablas.png)
+![Gestion Hotel](https://github.com/ciberzerone/baseDatos/blob/main/lab02/imagen/parteIII_alteracionTablas.PNG)
 
 
 ## Parte IV: Alteración de Tablas
