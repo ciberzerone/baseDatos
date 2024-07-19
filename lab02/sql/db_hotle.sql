@@ -4,23 +4,10 @@ START TRANSACTION;
 SET time_zone = "+00:00";
 
 
--- Configuración inicial
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
-SET time_zone = "+00:00";
-
 -- Crear la base de datos y usarla
 CREATE DATABASE IF NOT EXISTS `gestionhotel`;
 USE `gestionhotel`;
 
--- Crear la tabla `cliente`
-CREATE TABLE `cliente` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nombre` varchar(100) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Crear la tabla `hotel`
 CREATE TABLE `hotel` (
@@ -42,6 +29,14 @@ CREATE TABLE `habitacion` (
   CONSTRAINT `habitacion_ibfk_1` FOREIGN KEY (`hotel_id`) REFERENCES `hotel` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+-- Crear la tabla `cliente`
+CREATE TABLE `cliente` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `email` (`email`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 -- Crear la tabla `reserva`
 CREATE TABLE `reserva` (
   `id` int(11) NOT NULL AUTO_INCREMENT,

@@ -37,8 +37,7 @@ Basado en el diagrama de entidad-relación (ER) proporcionado, las entidades y a
   - fecha_inicio
   - fecha_fin
   - estado
-  - fecha_checkin
-  - fecha_checkout
+ 
 
 - **Servicio**
   - id (PK)
@@ -52,10 +51,33 @@ Basado en el diagrama de entidad-relación (ER) proporcionado, las entidades y a
 ## Parte II: Implementación de Relaciones
 
 2. **One-to-One**: Cliente y Habitación (aunque típicamente una habitación puede ser reservada por varios clientes a lo largo del tiempo, para la asignación específica, se considera one-to-one).
+
+```sql 
+-- Añadir columna cliente_id a la tabla habitacion para la relación uno a uno
+ALTER TABLE `habitacion`
+ADD COLUMN `cliente_id` int(11) UNIQUE;
+
+-- Añadir clave foránea para relacionar habitacion con cliente
+ALTER TABLE `habitacion`
+ADD CONSTRAINT `habitacion_ibfk_cliente` FOREIGN KEY (`cliente_id`) REFERENCES `cliente` (`id`) ON DELETE SET NULL;
+```
+
 3. **One-to-Many**: Hotel y Habitación (un hotel tiene muchas habitaciones).
+
+```sql 
+-- Añadir clave foránea para relacionar habitacion con hotel
+ALTER TABLE `habitacion`
+ADD CONSTRAINT `habitacion_ibfk_hotel` FOREIGN KEY (`hotel_id`) REFERENCES `hotel` (`id`) ON DELETE CASCADE;
+
+```
+
 4. **Many-to-Many**: Reserva y Servicio (una reserva puede tener muchos servicios y un servicio puede estar en muchas reservas).
+```sql 
 
+CONSTRAINT `reserva_servicio_ibfk_1` FOREIGN KEY (`reserva_id`) REFERENCES `reserva` (`id`) ON DELETE CASCADE,
+CONSTRAINT `reserva_servicio_ibfk_2` FOREIGN KEY (`servicio_id`) REFERENCES `servicio` (`id`) ON DELETE CASCADE
 
+```
 ### Imagen de ER - Gestion de Hotel
 ![Gestion Hotel](https://github.com/ciberzerone/baseDatos/blob/main/lab02/imagen/gestionhotel.png)
 
@@ -92,8 +114,8 @@ ON DUPLICATE KEY UPDATE
 
 ```
 
-### Imagen de ER - Gestion de Hotel
-![Gestion Hotel](https://github.com/ciberzerone/baseDatos/blob/main/lab02/imagen/parteIII_alteracionTablas.PNG)
+### ER - Alteración de Tablas
+![Alteración de Tablas](https://github.com/ciberzerone/baseDatos/blob/main/lab02/imagen/parteIII_alteracionTablas.PNG)
 
 
 ## Parte IV: Alteración de Tablas
