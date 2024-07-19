@@ -228,19 +228,112 @@ CREATE INDEX idx_servicio_id ON reserva_servicio(servicio_id);
 -- Tabla cliente
 CREATE UNIQUE INDEX idx_email ON cliente(email);
 ```
-### ER tabla 
-![ER tabla](https://github.com/ciberzerone/baseDatos/blob/main/lab02/imagen/consulta7TablaReservaMesJulio.PNG)
-
-
-
 
 
 9. Transacciones y Control de Concurrencia
 
 Simular escenarios de reservas simultáneas utilizando transacciones para garantizar la consistencia de los datos y evitar conflictos.
 
+
+- Escenario A: Cliente 1 Intenta Reservar la Habitación
+
+```sql
+START TRANSACTION;
+
+-- Verificar si la habitación está disponible
+SELECT estado FROM habitacion WHERE id = 1 AND estado = 'Disponible' FOR UPDATE;
+
+-- Si está disponible, proceder con la reserva
+INSERT INTO reserva (cliente_id, habitacion_id, fecha_inicio, fecha_fin, estado) 
+VALUES (1, 1, '2024-07-01', '2024-07-05', 'Activa');
+
+-- Actualizar el estado de la habitación a 'Ocupada'
+UPDATE habitacion SET estado = 'Ocupada' WHERE id = 1;
+
+COMMIT;
+
+```
+
+- Escenario B: Cliente 2 Intenta Reservar la Misma Habitación al Mismo Tiempo
+
+```sql
+START TRANSACTION;
+
+-- Verificar si la habitación está disponible
+SELECT estado FROM habitacion WHERE id = 1 AND estado = 'Disponible' FOR UPDATE;
+
+-- Si está disponible, proceder con la reserva
+INSERT INTO reserva (cliente_id, habitacion_id, fecha_inicio, fecha_fin, estado) 
+VALUES (2, 1, '2024-07-01', '2024-07-05', 'Activa');
+
+-- Actualizar el estado de la habitación a 'Ocupada'
+UPDATE habitacion SET estado = 'Ocupada' WHERE id = 1;
+
+COMMIT;
+```
+
+
 10. Uso de Triggers
 
 Crear triggers para automatizar acciones en la base de datos, como la actualización del estado de una habitación al realizarse una reserva o cancelación.
 
+- Trigger para Actualizar el Estado a 'Reservada' al Realizarse una Reserva
+
+```sql
+
+DELIMITER //
+
+CREATE TRIGGER actualizar_estado_habitacion_reservada
+AFTER INSERT ON Reservas
+FOR EACH ROW
+BEGIN
+    UPDATE Habitaciones
+    SET estado = 'Reservada'
+    WHERE habitacion_id = NEW.habitacion_id;
+END;
+//
+
+DELIMITER ;
+
+```
+
+- Trigger para Actualizar el Estado a 'Disponible' al Cancelarse una Reserva
+
+```sql
+
+Trigger para Actualizar el Estado a 'Disponible' al Cancelarse una Reserva
+
+DELIMITER //
+CREATE TRIGGER actualizar_estado_habitacion_disponible
+AFTER DELETE ON Reservas
+FOR EACH ROW
+BEGIN
+    UPDATE Habitaciones
+    SET estado = 'Disponible'
+    WHERE habitacion_id = OLD.habitacion_id;
+END;
+//
+DELIMITER ;
+
+```
+
 11. Consulta anidada
+
+```sql
+SELECT 
+    h.nombre AS nombre_hotel,
+    h.direccion,
+    (SELECT COUNT(*)
+     FROM Reserva r
+     JOIN Habitacion hab ON r.habitacion_id = hab.id
+     WHERE hab.hotel_id = h.id
+       AND MONTH(r.fecha_inicio) = 7
+       AND YEAR(r.fecha_inicio) = 2024) AS total_reservas
+FROM 
+    Hotel h
+WHERE 
+    h.id = 1;
+
+```
+### consulta anidada
+![consulta anidada](https://github.com/ciberzerone/baseDatos/blob/main/lab02/imagen/consulta_anidada.PNG)
