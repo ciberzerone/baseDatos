@@ -87,6 +87,7 @@ CONSTRAINT `reserva_servicio_ibfk_2` FOREIGN KEY (`servicio_id`) REFERENCES `ser
 
 
 ## Parte III: Alteración de Tablas
+5. **Alteración**: Alteración de tabla Reserva, agregar columnas fecha_checkin y fecha_checkout
 ```sql 
 ALTER TABLE Reserva
 ADD COLUMN fecha_checkin DATE,
@@ -114,15 +115,57 @@ ON DUPLICATE KEY UPDATE
 
 ```
 
-### ER - Alteración de Tablas
+### Alteración de Tablas
 ![Alteración de Tablas](https://github.com/ciberzerone/baseDatos/blob/main/lab02/imagen/parteIII_alteracionTablas.PNG)
 
 
-## Parte IV: Alteración de Tablas
-6. Consultas Utilizando Joins
-Realizar consultas que involucren joins para obtener información detallada, por ejemplo:
-Obtener la lista de habitaciones reservadas junto con los nombres de los clientes que las ocupan.
-Obtener la lista de 
+## Parte IV: Consultas con Joins
+6. Realizar consultas Join
+-- 1. Obtener la lista de habitaciones reservadas junto con los nombres de los clientes que las ocupan.
+
+```sql
+SELECT 
+    h.numero AS habitacion_numero,
+    h.tipo AS habitacion_tipo,
+    c.nombre AS cliente_nombre,
+    c.email AS cliente_email
+FROM 
+    reserva r
+INNER JOIN 
+    habitacion h ON r.habitacion_id = h.id
+INNER JOIN 
+    cliente c ON r.cliente_id = c.id
+WHERE 
+    r.fecha_checkin IS NOT NULL AND r.fecha_checkout IS NOT NULL;
+
+```
+
+### Habitaciones ocupadas por clientes
+![Habitaciones ocupadas por clientes](https://github.com/ciberzerone/baseDatos/blob/main/lab02/imagen/parteIII_alteracionTablas.PNG)
+
+
+-- 2. Obtener la lista de servicios reservados por un cliente específico junto con los detalles de cada servicio.
+
+```sql
+SELECT 
+    Cliente.nombre AS nombre_cliente, 
+    Servicio.nombre AS nombre_servicio, 
+    Servicio.descripcion
+FROM 
+    Cliente
+JOIN 
+    Reserva ON Cliente.id = Reserva.cliente_id
+JOIN 
+    Reserva_Servicio ON Reserva.id = Reserva_Servicio.reserva_id
+JOIN 
+    Servicio ON Reserva_Servicio.servicio_id = Servicio.id
+WHERE 
+    Cliente.id = 1;
+```
+### Servicios reservados por un cliente 
+![servicios reservados por un cliente ](https://github.com/ciberzerone/baseDatos/blob/main/lab02/imagen/parteIII_alteracionTablas.PNG)
+
+
 
 ## Parte 5: Retos Adicionales
 7. Subconsultas y Consultas Avanzadas
