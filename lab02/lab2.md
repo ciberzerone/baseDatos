@@ -167,10 +167,41 @@ WHERE
 
 
 
-## Parte 5: Retos Adicionales
+## Parte V: Retos Adicionales
 7. Subconsultas y Consultas Avanzadas
 
-Utilizar subconsultas para obtener la cantidad total de reservas realizadas en un hotel específico en un mes determinado.
+- Utilizar subconsultas para obtener la cantidad total de reservas realizadas en un hotel específico en un mes determinado.
+### tabla Reserva 
+![tabla reserva ](https://github.com/ciberzerone/baseDatos/blob/main/lab02/imagen/parteIV_servicio.PNG)
+
+
+```sql
+SELECT 
+    (SELECT COUNT(*)
+     FROM Reserva r
+     JOIN Habitacion h ON r.habitacion_id = h.id
+     WHERE h.hotel_id = 1 
+     AND MONTH(r.fecha_inicio) = 8
+     AND YEAR(r.fecha_inicio) = 2024) AS total_reservas
+```
+### reservas realizadas en un hotel específico en Agosto 
+![reservas realizadas en un hotel específico en Agosto](https://github.com/ciberzerone/baseDatos/blob/main/lab02/imagen/parteIV_servicio.PNG)
+
+
+
+```sql
+SELECT 
+    (SELECT COUNT(*)
+     FROM Reserva r
+     JOIN Habitacion h ON r.habitacion_id = h.id
+     WHERE h.hotel_id = 2 
+     AND MONTH(r.fecha_inicio) = 7
+     AND YEAR(r.fecha_inicio) = 2024) AS total_reservas
+```
+### reservas realizadas en un hotel específico en Julio 
+![reservas realizadas en un hotel específico en julio](https://github.com/ciberzerone/baseDatos/blob/main/lab02/imagen/parteIV_servicio.PNG)
+
+
 8. Indexación y Optimización
 
 Implementar índices en las tablas relevantes para mejorar el rendimiento de consultas frecuentes, como la búsqueda de habitaciones disponibles.
