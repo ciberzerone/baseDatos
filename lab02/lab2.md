@@ -140,8 +140,8 @@ WHERE
 
 ```
 
-### Habitaciones ocupadas por clientes
-![Habitaciones ocupadas por clientes](https://github.com/ciberzerone/baseDatos/blob/main/lab02/imagen/parteIII_alteracionTablas.PNG)
+### Habitaciones ocupadas por cliente
+![Habitaciones ocupadas por cliente](https://github.com/ciberzerone/baseDatos/blob/main/lab02/imagen/parteIV_habitacion.PNG)
 
 
 -- 2. Obtener la lista de servicios reservados por un cliente específico junto con los detalles de cada servicio.
@@ -163,7 +163,7 @@ WHERE
     Cliente.id = 1;
 ```
 ### Servicios reservados por un cliente 
-![servicios reservados por un cliente ](https://github.com/ciberzerone/baseDatos/blob/main/lab02/imagen/parteIII_alteracionTablas.PNG)
+![servicios reservados por un cliente ](https://github.com/ciberzerone/baseDatos/blob/main/lab02/imagen/parteIV_servicio.PNG)
 
 
 
