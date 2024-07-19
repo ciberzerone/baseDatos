@@ -202,9 +202,38 @@ SELECT
 ![reservas realizadas en un hotel específico en julio](https://github.com/ciberzerone/baseDatos/blob/main/lab02/imagen/consulta7TablaReservaMesJulio.PNG)
 
 
+
+
 8. Indexación y Optimización
 
 Implementar índices en las tablas relevantes para mejorar el rendimiento de consultas frecuentes, como la búsqueda de habitaciones disponibles.
+
+- Indices en la Tabla habitacion
+
+```sql
+-- Tabla habitacion
+CREATE INDEX idx_hotel_id ON habitacion(hotel_id);
+CREATE INDEX idx_estado ON habitacion(estado);
+
+-- Tabla reserva
+CREATE INDEX idx_cliente_id ON reserva(cliente_id);
+CREATE INDEX idx_habitacion_id ON reserva(habitacion_id);
+CREATE INDEX idx_fecha_inicio ON reserva(fecha_inicio);
+CREATE INDEX idx_fecha_fin ON reserva(fecha_fin);
+
+-- Tabla reserva_servicio
+CREATE INDEX idx_reserva_id ON reserva_servicio(reserva_id);
+CREATE INDEX idx_servicio_id ON reserva_servicio(servicio_id);
+
+-- Tabla cliente
+CREATE UNIQUE INDEX idx_email ON cliente(email);
+```
+### ER tabla 
+![ER tabla](https://github.com/ciberzerone/baseDatos/blob/main/lab02/imagen/consulta7TablaReservaMesJulio.PNG)
+
+
+
+
 
 9. Transacciones y Control de Concurrencia
 
