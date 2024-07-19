@@ -49,13 +49,6 @@ Basado en el diagrama de entidad-relación (ER) proporcionado, las entidades y a
   - reserva_id (FK)
   - servicio_id (FK)
 
-
-### Imagen de ER - Gestion de Hotel
-![biblioteca](https://github.com/ciberzerone/baseDatos/blob/main/lab02/imagen/gestionhotel.png)
-
-
-<hr>
-
 ## Parte II: Implementación de Relaciones
 
 2. **One-to-One**: Cliente y Habitación (aunque típicamente una habitación puede ser reservada por varios clientes a lo largo del tiempo, para la asignación específica, se considera one-to-one).
@@ -63,8 +56,44 @@ Basado en el diagrama de entidad-relación (ER) proporcionado, las entidades y a
 4. **Many-to-Many**: Reserva y Servicio (una reserva puede tener muchos servicios y un servicio puede estar en muchas reservas).
 
 
+### Imagen de ER - Gestion de Hotel
+![Gestion Hotel](https://github.com/ciberzerone/baseDatos/blob/main/lab02/imagen/gestionhotel.png)
+
+
+<hr>
+
+
+
 ## Parte III: Alteración de Tablas
-5. Realizar modificaciones 
+```sql 
+ALTER TABLE Reserva
+ADD COLUMN fecha_checkin DATE,
+ADD COLUMN fecha_checkout DATE;
+
+INSERT INTO `reserva` (`id`, `cliente_id`, `habitacion_id`, `fecha_inicio`, `fecha_fin`, `estado`, `fecha_checkin`, `fecha_checkout`) VALUES
+(1, 1, 1, '2024-07-01', '2024-07-05', 'Activa', '2024-07-01', '2024-07-05'),
+(2, 2, 2, '2024-07-06', '2024-07-10', 'Activa', '2024-07-06', '2024-07-10'),
+(3, 3, 3, '2024-07-11', '2024-07-15', 'Activa', '2024-07-11', '2024-07-15'),
+(4, 4, 4, '2024-07-16', '2024-07-20', 'Activa', '2024-07-16', '2024-07-20'),
+(5, 5, 5, '2024-07-21', '2024-07-25', 'Activa', '2024-07-21', '2024-07-25'),
+(6, 6, 6, '2024-07-26', '2024-07-30', 'Activa', '2024-07-26', '2024-07-30'),
+(7, 7, 7, '2024-08-01', '2024-08-05', 'Activa', '2024-08-01', '2024-08-05'),
+(8, 8, 8, '2024-08-06', '2024-08-10', 'Activa', '2024-08-06', '2024-08-10'),
+(9, 9, 9, '2024-08-11', '2024-08-15', 'Activa', '2024-08-11', '2024-08-15'),
+(10, 10, 10, '2024-08-16', '2024-08-20', 'Activa', '2024-08-16', '2024-08-20')
+ON DUPLICATE KEY UPDATE
+`cliente_id` = VALUES(`cliente_id`),
+`habitacion_id` = VALUES(`habitacion_id`),
+`fecha_inicio` = VALUES(`fecha_inicio`),
+`fecha_fin` = VALUES(`fecha_fin`),
+`estado` = VALUES(`estado`),
+`fecha_checkin` = VALUES(`fecha_checkin`),
+`fecha_checkout` = VALUES(`fecha_checkout`);
+
+```
+
+### Imagen de ER - Gestion de Hotel
+![Gestion Hotel](https://github.com/ciberzerone/baseDatos/blob/main/lab02/imagen/parteIII_alteracionTablas.png)
 
 
 ## Parte IV: Alteración de Tablas
