@@ -1,6 +1,10 @@
 ### LAB
 <hr>
 
+### SQL - Gestion de Hotel:
+[Ver SQL](https://github.com/ciberzerone/baseDatos/blob/main/lab01/sql/db_hotle.sql)
+
+
 ## Parte I: Diseño de la Base de Datos
 
 ### 1. Modelado de Entidades y Relaciones
@@ -45,6 +49,9 @@ Basado en el diagrama de entidad-relación (ER) proporcionado, las entidades y a
   - reserva_id (FK)
   - servicio_id (FK)
 
+
+### Imagen de ER - Gestion de Hotel
+![biblioteca](https://github.com/ciberzerone/baseDatos/blob/main/lab01/imagen/gestionhotel.PNG)
 
 
 <hr>
