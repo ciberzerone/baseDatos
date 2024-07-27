@@ -16,7 +16,8 @@
 Crear una base de datos llamada `empresa`.
 
 ```sql 
-
+CREATE DATABASE empresa;
+USE empresa;
 ```
 ### Entidades y Atributos
 
