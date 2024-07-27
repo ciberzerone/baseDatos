@@ -3,16 +3,21 @@
 <hr>
 
 ### SQL - Base de datos Empresa:
+[Ver SQL](https://github.com/ciberzerone/baseDatos/blob/main/lab02/sql/db_hotle.sql)
+
 ### Sql script - Empresa:
 [Ver SQL](https://github.com/ciberzerone/baseDatos/blob/main/lab02/sql/db_hotle.sql)
 
 
-## Parte I: Diseño de la Base de Datos
+## Paso 1: Crear la Base de Datos
 
 ### 1. Modelado de Entidades y Relaciones
 
-Basado en el diagrama de entidad-relación (ER) proporcionado, las entidades y atributos son los siguientes:
+Crear una base de datos llamada `empresa`.
 
+```sql 
+
+```
 ### Entidades y Atributos
 
 - **Hotel**
