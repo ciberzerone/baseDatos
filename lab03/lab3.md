@@ -15,11 +15,39 @@
 
 Crear una base de datos llamada `empresa`.
 
+
+
+## Paso 2: Crear las Tablas y Relaciones
+
+
+### 1. Crear una tabla llamada `departamentos` con las siguientes columnas:
+    - departamento_id: INT, clave primaria, autoincremento.
+    - nombre: VARCHAR(100), no hay nada.
+
 ```sql 
-CREATE DATABASE empresa;
-USE empresa;
+CREATE TABLE departamentos (
+    departamento_id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL
+);
 ```
-### Entidades y Atributos
+### 2. Crea una tabla llamada `empleados` con las siguientes columnas:
+    - empleado_id: INT, clave primaria, autoincremento.
+    - nombre: VARCHAR(100), no hay nada.
+    - salario: DECIMAL(10, 2), no, no.
+    - departamento_id: INT, clave foránea que referencia a departamento_iden departamentos.
+
+```sql 
+CREATE TABLE empleados (
+    empleado_id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    salario DECIMAL(10, 2) NOT NULL,
+    departamento_id INT,
+    CONSTRAINT fk_departamento_empleado FOREIGN KEY (departamento_id) REFERENCES departamentos(departamento_id)
+);
+```
+
+
+
 
 - **Hotel**
   - id (PK)
