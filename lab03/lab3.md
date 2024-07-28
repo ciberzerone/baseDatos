@@ -193,3 +193,47 @@ INSERT INTO detalles_empleado (empleado_id, direccion, telefono) VALUES
 
 ## Imagen de ER - Empresa
 ![Electrodomésticos](https://github.com/ciberzerone/baseDatos/blob/main/lab03/imagen/erEmpresa.PNG)
+
+
+## Paso 2: Crear una Función
+
+
+### 10. Crea una función llamada `calcular_bonificaciontoca` que sepa como parámetro el `empleado_id` y devuelva una bonificación como el 10% del salario del empleado. Utilizar la sensacía DETERMINISTIC en la definición de la función.
+
+```sql 
+
+CREATE FUNCTION calcular_bonificacion(empleado_id INT) RETURNS DECIMAL(10, 2)
+DETERMINISTIC
+BEGIN
+    DECLARE salario_base DECIMAL(10, 2);
+    DECLARE bonificacion DECIMAL(10, 2);
+
+    -- Obtener el salario del empleado
+    SELECT salario INTO salario_base
+    FROM empleados
+    WHERE empleado_id = empleado_id;
+
+    -- Calcular la bonificación como el 10% del salario
+    SET bonificacion = salario_base * 0.10;
+
+    RETURN bonificacion;
+END $$
+
+```
+
+## Paso 4: Usar un delimitador 
+
+
+### 11. Asegúrate de utilizar un delimitador (DELIMITER) diferente al punto y coma (;) al definir la función en el paso anterior. El desconcedo el delimitador a su valor original.
+
+```sql 
+DELIMITER $$
+
+CREATE FUNCTION calcular_bonificacion(empleado_id INT) RETURNS DECIMAL(10, 2)
+....
+
+
+
+DELIMITER ;
+```
+    
